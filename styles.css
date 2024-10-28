@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1b1b2f;
     color: #ffffff;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -73,7 +73,7 @@ body {
     color: #ffffff;
 }
 
-/* Section Styles with Color Differentiation */
+/* Section Styles */
 .section {
     padding: 4em 2em;
     text-align: center;
@@ -95,149 +95,16 @@ body {
     background-color: #34495e;
 }
 
-/* Game Gallery */
-.game-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding-top: 2em;
-    flex-wrap: wrap;
-}
-
-.game-card {
-    width: 250px;
-    background-color: #232946;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.game-card img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s;
-}
-
-.game-card:hover img {
-    transform: scale(1.05);
-}
-
-.game-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.contact-form input, .contact-form textarea, .contact-form .btn {
-    padding: 0.8em;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    width: 100%;
-}
-
-.contact-form textarea {
-    resize: none;
-}
-
-.contact-form .btn {
-    background-color: #00d8ff;
-    color: #231b4b;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form .btn:hover {
-    background-color: #00a3cc;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #1b1b2f;
-    text-align: center;
-    padding: 2em;
-    color: #ffffff;
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 1200px) {
-    .hero h1 {
-        font-size: 2.5em;
-    }
-    
-    .hero p {
-        font-size: 1.1em;
-    }
-    
-    .game-card {
-        width: 200px;
-    }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container nav ul {
-        flex-direction: column; /* Stacks links vertically */
+        flex-direction: column;
         gap: 1em;
-        margin-top: 0.5em;
     }
-    
     .hero h1 {
         font-size: 2em;
     }
-    
-    .hero p {
-        font-size: 1em;
-    }
-    
-    .game-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .game-card {
-        width: 90%;
-        margin-bottom: 2em;
-    }
-    
-    .contact-form {
-        max-width: 100%;
-        padding: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-container .logo {
-        font-size: 1.5em;
-    }
-    
-    .nav-container nav ul li a {
-        font-size: 1em;
-    }
-
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-    
     .game-card {
         width: 100%;
-    }
-    
-    .contact-form input, .contact-form textarea, .contact-form .btn {
-        font-size: 0.9em;
-        padding: 0.5em;
     }
 }
