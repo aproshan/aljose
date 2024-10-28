@@ -13,16 +13,21 @@ body {
 }
 
 /* Header Styles */
-.nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1b1b2f;
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #0f111a;
     padding: 1em 2em;
-    text-align: center;
+    z-index: 100;
 }
 
-.nav-container .logo {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     font-size: 2em;
     color: #00d8ff;
     font-weight: bold;
@@ -31,9 +36,7 @@ body {
 .nav-container nav ul {
     list-style: none;
     display: flex;
-    gap: 2em;
-    padding: 0;
-    margin-top: 1em;
+    gap: 1.5em;
 }
 
 .nav-container nav ul li a {
@@ -60,22 +63,29 @@ body {
     align-items: center;
     text-align: center;
     padding: 2em;
+    position: relative;
 }
 
 .hero h1 {
     font-size: 3em;
     color: #00d8ff;
-    margin-bottom: 1em;
 }
 
 .hero p {
     font-size: 1.2em;
-    color: #ffffff;
 }
 
-/* Section Styles */
+.central-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 1em auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
 .section {
-    padding: 4em 2em;
+    padding: 3em 2em;
     text-align: center;
 }
 
@@ -93,6 +103,45 @@ body {
 
 .section-contact {
     background-color: #34495e;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form .btn {
+    background-color: #00d8ff;
+    color: #ffffff;
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn:hover {
+    background-color: #008fb3;
+}
+
+/* Footer */
+footer {
+    background-color: #0f111a;
+    padding: 1em;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 2em;
 }
 
 /* Responsive Design */
