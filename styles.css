@@ -9,15 +9,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1b1b2f;
     color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Header Styles */
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     background-color: #1b1b2f;
     padding: 1em 2em;
+    text-align: center;
 }
 
 .nav-container .logo {
@@ -30,6 +32,8 @@ body {
     list-style: none;
     display: flex;
     gap: 2em;
+    padding: 0;
+    margin-top: 1em;
 }
 
 .nav-container nav ul li a {
@@ -54,39 +58,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.hero .overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2em;
     text-align: center;
-    border-radius: 8px;
-    animation: fadeIn 2s ease;
+    padding: 2em;
 }
 
 .hero h1 {
     font-size: 3em;
     color: #00d8ff;
-    animation: slideIn 1s ease forwards;
+    margin-bottom: 1em;
 }
 
 .hero p {
     font-size: 1.2em;
     color: #ffffff;
-    margin-top: 1em;
-    animation: slideIn 1.5s ease forwards;
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideIn {
-    0% { transform: translateY(30px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
 }
 
 /* Section Styles with Color Differentiation */
@@ -117,7 +101,7 @@ body {
     justify-content: center;
     gap: 2em;
     padding-top: 2em;
-    flex-wrap: wrap; /* Responsive behavior for smaller screens */
+    flex-wrap: wrap;
 }
 
 .game-card {
@@ -142,10 +126,10 @@ body {
     transform: translateY(-10px);
 }
 
-/* Contact Form in Horizontal Layout */
+/* Contact Form */
 .contact-form {
     display: flex;
-    flex-direction: column; /* Stacks elements on smaller screens */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
@@ -158,16 +142,10 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0.5em 0;
-}
-
-.contact-form input, .contact-form .btn {
-    width: calc(100% - 1em); /* Full width for smaller screens */
+    width: 100%;
 }
 
 .contact-form textarea {
-    width: 100%;
-    height: 100px;
     resize: none;
 }
 
@@ -176,6 +154,7 @@ body {
     color: #231b4b;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .contact-form .btn:hover {
@@ -190,17 +169,34 @@ footer {
     color: #ffffff;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+/* Responsive Design Adjustments */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.5em;
     }
     
+    .hero p {
+        font-size: 1.1em;
+    }
+    
+    .game-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
     .nav-container nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 0;
+        flex-direction: column; /* Stacks links vertically */
+        gap: 1em;
+        margin-top: 0.5em;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero p {
+        font-size: 1em;
     }
     
     .game-gallery {
@@ -209,21 +205,39 @@ footer {
     }
     
     .game-card {
-        width: 90%; /* Full width for mobile */
+        width: 90%;
         margin-bottom: 2em;
     }
     
     .contact-form {
-        flex-direction: column; /* Stacks elements vertically */
+        max-width: 100%;
+        padding: 1em;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2em; /* Responsive font size */
+    .nav-container .logo {
+        font-size: 1.5em;
     }
     
+    .nav-container nav ul li a {
+        font-size: 1em;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
     .hero p {
-        font-size: 1em; /* Responsive font size */
+        font-size: 0.9em;
+    }
+    
+    .game-card {
+        width: 100%;
+    }
+    
+    .contact-form input, .contact-form textarea, .contact-form .btn {
+        font-size: 0.9em;
+        padding: 0.5em;
     }
 }
