@@ -11,7 +11,7 @@ body {
     color: #ffffff;
 }
 
-/* Horizontal Navigation */
+/* Header Styles */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,6 @@ body {
     color: #ffffff;
     margin-top: 1em;
     animation: slideIn 1.5s ease forwards;
-    text-align: center;
 }
 
 /* Keyframe Animations */
@@ -182,7 +181,7 @@ body {
     background-color: #00a3cc;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #1b1b2f;
     text-align: center;
