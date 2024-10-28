@@ -83,9 +83,16 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.image-attribution {
+    font-size: 0.8em;
+    color: #ddd;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
 /* Sections */
 .section {
-    padding: 3em 2em;
+    padding: 4em 2em;
     text-align: center;
 }
 
