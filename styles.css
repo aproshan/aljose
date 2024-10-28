@@ -11,27 +11,25 @@ body {
     color: #ffffff;
 }
 
-/* Navigation */
+/* Horizontal Navigation */
 .nav-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #1b1b2f;
-    padding: 1em 0;
+    padding: 1em 2em;
 }
 
 .nav-container .logo {
     font-size: 2em;
     color: #00d8ff;
     font-weight: bold;
-    margin-bottom: 0.5em;
 }
 
 .nav-container nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    gap: 2em;
 }
 
 .nav-container nav ul li a {
@@ -39,11 +37,12 @@ body {
     text-decoration: none;
     font-size: 1.2em;
     padding: 0.5em;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .nav-container nav ul li a:hover {
     color: #00d8ff;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -51,7 +50,7 @@ body {
     background-image: url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,16 +62,31 @@ body {
     padding: 2em;
     text-align: center;
     border-radius: 8px;
+    animation: fadeIn 2s ease;
 }
 
 .hero h1 {
     font-size: 3em;
     color: #00d8ff;
+    animation: slideIn 1s ease forwards;
 }
 
 .hero p {
     font-size: 1.2em;
     color: #ffffff;
+    margin-top: 1em;
+    animation: slideIn 1.5s ease forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 /* Section Styles */
@@ -94,11 +108,11 @@ body {
     margin: 0 auto;
 }
 
+/* Game Gallery */
 .game-gallery {
     display: flex;
     justify-content: center;
     gap: 2em;
-    flex-wrap: wrap;
     padding-top: 2em;
 }
 
@@ -113,10 +127,44 @@ body {
 .game-card img {
     width: 100%;
     display: block;
+    transition: transform 0.3s;
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
 }
 
 .game-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+}
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact input, #contact textarea, #contact .btn {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#contact .btn {
+    background-color: #00d8ff;
+    color: #231b4b;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contact .btn:hover {
+    background-color: #00a3cc;
 }
 
 /* Footer */
