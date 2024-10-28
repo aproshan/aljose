@@ -33,6 +33,15 @@ body {
     font-weight: bold;
 }
 
+.logo-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the logo circular */
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle; /* Align logo vertically with text */
+}
+
+
 .nav-container nav ul {
     list-style: none;
     display: flex;
