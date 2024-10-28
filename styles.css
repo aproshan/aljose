@@ -29,9 +29,9 @@ body {
 }
 
 .logo-image {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Keep width and height the same for a circle */
-    border-radius: 50%; /* Makes the image circular */
+    width: 80px; /* Adjusted size for better fit */
+    height: 80px; /* Keep width and height the same for a circle */
+    border-radius: 50%; /* Keeps the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     margin-right: 0.5rem; /* Space between logo and text */
 }
