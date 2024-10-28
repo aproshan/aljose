@@ -28,19 +28,17 @@ body {
 }
 
 .logo {
-    font-size: 2em;
-    color: #00d8ff;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .logo-image {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
     border-radius: 50%; /* Make the logo circular */
     margin-right: 10px; /* Space between logo and text */
     vertical-align: middle; /* Align logo vertically with text */
 }
-
 
 .nav-container nav ul {
     list-style: none;
