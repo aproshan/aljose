@@ -3,58 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aljose Game Development</title>
-    <meta name="description" content="Explore Aljose - A Game Development Studio creating immersive worlds and unforgettable stories.">
-    <meta name="keywords" content="Aljose, Game Development, Story Games, Immersive Experiences">
+    <title>Aljose Game Development | Immersive & Story-Rich Gaming Experiences</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="description" content="Aljose Game Development - Crafting immersive, story-rich games with cutting-edge technology and innovative gameplay.">
+    <meta name="keywords" content="Aljose, game development, immersive games, storytelling, game studio, gaming experiences, fantasy worlds, interactive games, indie games, game design">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="nav-container">
-            <img src="logo.png" alt="Aljose Logo" class="logo-image">
             <div class="logo">Aljose</div>
             <nav>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section with Image -->
+    <!-- Hero Section with Central Image -->
     <section class="hero">
-        <img src="central-image.jpg" alt="Fantasy World" class="central-image">
+        <img src="central-image.jpg" alt="Attractive Game World" class="central-image">
+        <p class="image-attribution">Image courtesy of <a href="https://www.freepik.com" target="_blank">Freepik</a></p>
         <div class="overlay">
             <h1>Discover Unforgettable Worlds</h1>
-            <p>Creating immersive experiences with passion and creativity.</p>
-            <a href="games.html" class="btn">Explore Our Games</a>
+            <p>Building immersive experiences with passion and creativity.</p>
+            <a href="#games" class="btn">Explore Our Games</a>
         </div>
-        <p class="image-attribution">Image courtesy of <a href="https://www.freepik.com" target="_blank">Freepik</a></p>
     </section>
 
-    <!-- Main Sections Overview -->
-    <section id="about" class="section">
+    <!-- About Section -->
+    <section id="about" class="section section-about">
         <h2>About Us</h2>
-        <p>At Aljose, we’re driven to craft games that resonate deeply with players. <a href="about.html">Read more...</a></p>
+        <p>Aljose is dedicated to crafting innovative, story-rich games. Our team of passionate developers and artists strives to bring unforgettable gaming experiences to players worldwide.</p>
     </section>
 
-    <section id="games" class="section">
+    <!-- Games Section -->
+    <section id="games" class="section section-games">
         <h2>Our Games</h2>
-        <p>Explore our portfolio of unique, story-driven games that transport players to new worlds. <a href="games.html">Learn more...</a></p>
+        <div class="game-gallery">
+            <div class="game-card">
+                <img src="game1.jpg" alt="Game 1">
+                <h3>Game Title 1</h3>
+                <p>A brief description of Game 1's storyline and gameplay.</p>
+            </div>
+            <div class="game-card">
+                <img src="game2.jpg" alt="Game 2">
+                <h3>Game Title 2</h3>
+                <p>An exciting overview of Game 2 with gameplay highlights.</p>
+            </div>
+            <div class="game-card">
+                <img src="game3.jpg" alt="Game 3">
+                <h3>Game Title 3</h3>
+                <p>Discover the features and gameplay of Game 3.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="news" class="section">
+    <!-- News Section -->
+    <section id="news" class="section section-news">
         <h2>Latest News</h2>
-        <p>Catch up on the latest news, releases, and upcoming events from Aljose. <a href="news.html">More details...</a></p>
+        <p>Stay updated on our latest releases, events, and announcements.</p>
+        <div class="news-item">
+            <h3>Upcoming Game Release!</h3>
+            <p>We’re thrilled to announce the release of our latest game coming next month.</p>
+        </div>
+        <div class="news-item">
+            <h3>Aljose at GameCon</h3>
+            <p>Join us at GameCon this year to try our new demos and meet the developers!</p>
+        </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
         <h2>Contact Us</h2>
-        <p>We’d love to hear from you! Whether for collaboration or queries, reach out. <a href="contact.html">Contact us...</a></p>
+        <p>Have questions or want to collaborate? Reach out to us!</p>
+        <form action="#" method="post" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
@@ -63,3 +96,4 @@
     </footer>
 </body>
 </html>
+
