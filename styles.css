@@ -117,6 +117,7 @@ body {
     justify-content: center;
     gap: 2em;
     padding-top: 2em;
+    flex-wrap: wrap; /* Responsive behavior for smaller screens */
 }
 
 .game-card {
@@ -144,12 +145,12 @@ body {
 /* Contact Form in Horizontal Layout */
 .contact-form {
     display: flex;
+    flex-direction: column; /* Stacks elements on smaller screens */
     justify-content: center;
     align-items: center;
     gap: 1em;
     max-width: 900px;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
 .contact-form input, .contact-form textarea, .contact-form .btn {
@@ -161,7 +162,7 @@ body {
 }
 
 .contact-form input, .contact-form .btn {
-    width: calc(50% - 1em);
+    width: calc(100% - 1em); /* Full width for smaller screens */
 }
 
 .contact-form textarea {
@@ -187,4 +188,42 @@ footer {
     text-align: center;
     padding: 2em;
     color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-container nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    
+    .game-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .game-card {
+        width: 90%; /* Full width for mobile */
+        margin-bottom: 2em;
+    }
+    
+    .contact-form {
+        flex-direction: column; /* Stacks elements vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em; /* Responsive font size */
+    }
+    
+    .hero p {
+        font-size: 1em; /* Responsive font size */
+    }
 }
